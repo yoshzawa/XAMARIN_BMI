@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace App5
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage2 : ContentPage
     {
-        public MainPage()
+        public MainPage2()
         {
             InitializeComponent();
             ButtonBMI.Clicked += ButtonClickEvent;
@@ -25,7 +25,12 @@ namespace App5
         private void ButtonClickEvent(object sender, EventArgs e)
         {
             float height = float.Parse(EntryHeight.Text);
-            LabelResult.Text = "height=" + height;
+            height = height * height;
+
+            float weight = int.Parse(EntryWeight.Text);
+            weight = weight/height;
+
+            LabelResult.Text = "BMI=" + weight;
 
         }
     }
