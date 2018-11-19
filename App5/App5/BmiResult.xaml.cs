@@ -14,12 +14,14 @@ namespace App5
 	{
         private float height;
 
+        // 引数のないコンストラクタ
         public BmiResult ()
 		{
 			InitializeComponent ();
             buttonBack.Clicked += buttonBackClicked;
         }
 
+        // 引数のあるコンストラクタ
         public BmiResult(float height)
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace App5
             buttonBack.Clicked += buttonBackClicked;
         }
 
+        // 前のページに戻るボタンの処理
         private void buttonBackClicked(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();

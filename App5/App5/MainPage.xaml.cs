@@ -9,6 +9,7 @@ namespace App5
 {
     public partial class MainPage : ContentPage
     {
+        // 最初のページのコンストラクタ
         public MainPage()
         {
             InitializeComponent();
@@ -16,12 +17,15 @@ namespace App5
             ButtonBMI2.Clicked += ButtonClickEvent2;
         }
 
+
+        // 新しいページを呼び出す処理
         private void ButtonClickEvent2(object sender, EventArgs e)
         {
             float height = float.Parse(EntryHeight.Text);
             Navigation.PushModalAsync(new NavigationPage(new BmiResult(height)));
         }
 
+        // 最初のページでBMIを表示する処理（実際の計算はしていない）
         private void ButtonClickEvent(object sender, EventArgs e)
         {
             float height = float.Parse(EntryHeight.Text);
