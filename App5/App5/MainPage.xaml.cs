@@ -17,6 +17,7 @@ namespace App5
             ButtonBMI2.Clicked += ButtonClickEvent2;
         }
 
+
         // 新しいページを呼び出す処理
         private void ButtonClickEvent2(object sender, EventArgs e)
         {
